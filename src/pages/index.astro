@@ -1,11 +1,12 @@
 ---
+import Title from "../components/astro/Title.astro";
 import { Counter } from "../components/react/Counter";
 import Page from "../layouts/page.astro";
 ---
 
-<Page>
-  <h1 class="font-sans antialiased text-7xl text-sky-950 font-extrabold">
-    Hello, React!
-  </h1>
-  <Counter start={0} client:only />
+<Page pageTitle="Hello, React!">
+  <!-- static content: H1 with text -->
+  <Title />
+  <!-- rendered on the client (it's an interactive React component) -->
+  <Counter start={0} client:load />
 </Page>
