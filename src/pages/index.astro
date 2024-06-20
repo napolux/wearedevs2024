@@ -1,4 +1,5 @@
 ---
+import { Counter } from "../components/react/Counter";
 import Page from "../layouts/page.astro";
 ---
 
@@ -6,4 +7,5 @@ import Page from "../layouts/page.astro";
   <h1 class="font-sans antialiased text-7xl text-sky-950 font-extrabold">
     Hello, React!
   </h1>
+  <Counter start={0} client:only />
 </Page>
