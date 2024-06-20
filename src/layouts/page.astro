@@ -1,0 +1,16 @@
+---
+import Container from "../components/astro/Container.astro";
+import Head from "../components/astro/Head.astro";
+
+const { pageTitle } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <Head pageTitle={`${pageTitle} - WeAreDevs 2024`} />
+  <body class="bg-neutral-50">
+    <Container>
+      <slot />
+    </Container>
+  </body>
+</html>
